@@ -24,7 +24,7 @@ if __name__=="__main__":
     for i in range(n):
         pid=input("Enter PID: ")
         bt=int(input(f"Enter Burst time for {pid}: "))
-        priority=int(input("Enter priority for {pid}: "))
+        priority=int(input(f"Enter priority for {pid}: "))
         processes.append(Process(pid,bt,priority))
     wt,avg=(PrioSche(processes))
     print(f"{'PID':<10}{'BT':<15}{'WT':<15}")
