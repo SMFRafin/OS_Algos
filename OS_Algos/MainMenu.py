@@ -16,7 +16,8 @@ def main():
                 print("3. SJF")
                 print("4. Priority Scheduling Non-Premtive")
                 print("5. Priority Scheduling Premtive")
-                print("6. Go to Main Menu")
+                print("6. Round Robin")
+                print("7. Go to Main Menu")
                 ch1=input("Enter scheduling choice: ")
                 
                 if ch1=="1":
@@ -33,6 +34,8 @@ def main():
                     print("For PSP")
                     PrioritySchedulingPremptive.run()
                 if ch1=="6":
+                    print("Not yet Implemented")
+                if ch1=="7":
                     break
                 
         if ch=="3":
