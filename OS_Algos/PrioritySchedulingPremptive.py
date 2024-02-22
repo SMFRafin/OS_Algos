@@ -34,7 +34,7 @@ def PrioSche(processes):
 
     return wt,avg_wt
 
-if __name__=="__main__":
+def run():
     n=int(input("Enter number of process: "))
     processes=[]
     for i in range(n):
@@ -48,5 +48,4 @@ if __name__=="__main__":
     print(f"{'PID':<10}{'BT':<15}{'WT':<15}")
     for i in range(len(processes)):
         print(f"{processes[i].pid:<10}{processes[i].bt:<15}{wt[i]:<15}")
-
-    print(f"Avg_WT: {avg}")
+    print(f"Avg_WT using PSP: {avg}")

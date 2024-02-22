@@ -1,14 +1,14 @@
 class Process:
-    def __init__(self,processes,bt,order):
+    def __init__(self,processes,bt,at):
         self.processes=processes
         self.bt=bt
-        self.order=order
+        self.at=at
     
-def getOrder(proc):
-    return proc.order
+def getAT(proc):
+    return proc.at
 
 def FCFS(process):
-    process.sort(key=getOrder)
+    process.sort(key=getAT)
     wt=[0]
     total=0
     for i in range(1,len(process)):
@@ -17,16 +17,16 @@ def FCFS(process):
     avgwt=total/len(process)
     return (wt,avgwt)
 
-if __name__=='__main__':
+def run():
     n=int(input("Enter the number of processes: "))
     pc=[]
     for i in range(n):
         processes=input("Enter PID: ")
         bt=int(input(f"Enter Burst time for {processes}: "))
-        order=int(input(f"Enter order for {processes}: "))
-        pc.append(Process(processes,bt,order))
+        at=int(input(f"Enter Arrival Time for {processes}: "))
+        pc.append(Process(processes,bt,at))
     wt,avg=(FCFS(pc))
     print(f"{'PID':<10}{'BT':<15}{'WT':<15}")
     for i in range(len(pc)):
         print(f"{pc[i].processes:<10}{pc[i].bt:<15}{wt[i]:<15}")
-    print(f"Avg_WT:{avg}")
+    print(f"Avg_WT using FCFS: {avg}")
