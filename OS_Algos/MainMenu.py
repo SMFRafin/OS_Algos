@@ -1,4 +1,4 @@
-import FCFS,PrioritySchedulingNP,PrioritySchedulingPremptive
+import FCFS,PrioritySchedulingNP,PrioritySchedulingPremptive,SJF
 
 def main():
     while(True):
@@ -6,14 +6,14 @@ def main():
         print("2. CPU Scheduling")
         print("3. Exit")
         ch=input("Enter your choice: ")
-        if ch == "1":
+        if ch=="1":
             print("Not yet Implemented")
         
         if ch=='2':
             while True:
                 print("1. FCFS")
-                print("2. SRTF")
-                print("3. SJF")
+                print("2. SJF")
+                print("3. SRTF")
                 print("4. Priority Scheduling Non-Premtive")
                 print("5. Priority Scheduling Premtive")
                 print("6. Round Robin")
@@ -24,7 +24,7 @@ def main():
                     print("For FCFS: ")
                     FCFS.run()
                 if ch1=="2":
-                    print("Not yet Implemented")
+                    SJF.run()
                 if ch1=="3":
                     print("Not yet Implemented")
                 if ch1=="4":
