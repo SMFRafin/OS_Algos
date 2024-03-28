@@ -1,4 +1,4 @@
-import FCFS,PrioritySchedulingNP,PrioritySchedulingPremptive,SJF
+import FCFS,PrioritySchedulingNP,PrioritySchedulingPremptive,SJF,RR
 
 def main():
     while(True):
@@ -34,7 +34,8 @@ def main():
                     print("For PSP")
                     PrioritySchedulingPremptive.run()
                 if ch1=="6":
-                    print("Not yet Implemented")
+                    print("For RR: ")
+                    RR.run()
                 if ch1=="7":
                     break
                 
