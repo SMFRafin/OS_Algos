@@ -1,4 +1,4 @@
-import FCFS,PrioritySchedulingNP,PrioritySchedulingPremptive,SJF,RR
+import FCFS,PrioritySchedulingNP,PrioritySchedulingPremptive,SJF,RR,SRTF
 
 def main():
     while(True):
@@ -26,7 +26,7 @@ def main():
                 if ch1=="2":
                     SJF.run()
                 if ch1=="3":
-                    print("Not yet Implemented")
+                    SRTF.run()
                 if ch1=="4":
                     print("For PSNP: ")
                     PrioritySchedulingNP.run()
