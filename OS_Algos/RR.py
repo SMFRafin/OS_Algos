@@ -6,7 +6,7 @@ class Process:
         self.at=at
 
 def RR(process, quantum):
-    n=n
+    n=len(process)
     queue=[]
     waiting_time=[0]*n
     remaining_burst_time = [p.bt for p in process]
