@@ -33,7 +33,8 @@ def RR(process, quantum):
 
     avg_waiting_time=sum(waiting_time)/n
     return waiting_time,avg_waiting_time
-    
+
+
 def run():
     n=int(input("Enter the number of processes: "))
     quantum=int(input("Enter the time quantum: "))
@@ -48,4 +49,3 @@ def run():
     for i in range(len(pc)):
         print(f"{pc[i].pid:<10}{pc[i].bt:<15}{wt[i]:<15}")
     print(f"Avg_WT using RR: {avg}")
-    

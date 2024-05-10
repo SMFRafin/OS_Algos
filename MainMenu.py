@@ -1,14 +1,25 @@
-import FCFS,PrioritySchedulingNP,PrioritySchedulingPremptive,SJF,RR,SRTF
+from OS_Algos import FCFS,PrioritySchedulingNP,PrioritySchedulingPremptive,SJF,RR,SRTF
+from MemoryManagement import FIFO,Optimal
 
-def main():
+def main(): 
     while(True):
         print("1. Memory Management")
         print("2. CPU Scheduling")
         print("3. Exit")
         ch=input("Enter your choice: ")
         if ch=="1":
-            print("Not yet Implemented")
-        
+            while True:
+                print("1. FIFO")
+                print("2. Optimal")
+                print("3. Go to Main Menu")
+                ch1=input("Enter your choice: ")
+                
+                if ch1=="1":
+                    FIFO.run()
+                if ch1=="2":
+                    Optimal.run()
+                if ch1=="3":
+                    break
         if ch=='2':
             while True:
                 print("1. FCFS")
